@@ -1,0 +1,731 @@
+
+body {
+  background-color:#464444;
+  /* background-color: #00ff00 ; */
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+.container{
+  display: flex;
+  padding:30px;
+  box-sizing: border-box;
+}
+
+
+/* todo THIS
+@media screen and (min-width: 350px) {
+  
+  .card-container {
+    background-color: rgb(7, 145, 237);
+    width: 450px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+} */
+
+/* @media screen and (max-width: 1020px) {
+    .main-container{
+    background-color: green;
+    height: 800px;
+    display: flex;
+
+    
+  }
+}  */
+
+@media screen and (min-width: 320px) {
+
+  .main-container{
+    margin: 0 8rem;
+    height: 950px;
+    display: flex;
+  }
+
+} 
+body div {
+  /* width: 100px; */
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+/* !!fontsizes */
+h4 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  line-height: 150%;
+}
+h6{
+  margin-bottom: 0px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  
+}
+h1 {
+  color: white;
+  font-size: 30px;
+}
+
+/* !! containers */
+/* html tag ===> .img {
+  height: 50px;
+  width: 50px;
+  border-radius: 25%;
+} */
+/* !! profile heroicon */
+.check-circle-heroicon{
+  width: 25px;
+  transform: translate(222%, 50%); 
+  z-index: 2;
+}
+.x{
+  width: 20px;
+  transform: translate(900%, 20%); 
+  z-index: 2;
+  position: relative;
+}
+.student-info {
+  background-image: url("./imgs/1.jpeg");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-position: center 0;
+  width: auto;
+  height: 240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 75%;
+  border-radius: 25px 25px 0 0 ;
+  
+}
+
+.student-id{
+  border: 1px solid white;
+  height: 30px;
+  border-radius: 40px;
+  line-height:50%;
+  color: white;
+  background-color: rgba(207, 22, 89, 0.785);
+  margin-top: 10px;
+}
+
+.profile-photo{
+  background-image: url("https://i.pinimg.com/474x/e7/8b/58/e78b58dc548e00d04cd8217510b4e777.jpg");
+  height: 50px;
+  width: 50px;
+  border-radius: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.enrolment-bar{
+
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  text-align:center;
+  width: 300px;
+  height: 90px;
+  border-radius: 25px;
+  background-color: #343639;
+  transform: translate(0%, -61%); 
+  z-index: 2;
+  margin: 0 10px;
+}
+/* !!media */
+@media screen and (min-width: 1000px) {
+  
+  .enrolment-bar{
+    width: 88%;    
+  }
+  .status h6{
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .status{
+    padding: 0 50px;
+  }
+  
+} 
+
+@media only screen and (max-width: 1000px) and (min-width: 320px) {
+  .enrolment-bar{
+
+    /* width: 420px; */
+    width:99%;
+    
+  }
+  .status h6{
+    font-size: 12px;
+    margin-top: 10px;
+    
+   
+    
+   }
+
+}
+
+@media only screen and (max-width: 1401px) and (min-width: 1001px) {
+  .enrolment-bar{
+
+    /* width: 420px; */
+    width:99%;
+    
+  }
+  .status h6{
+    font-size: 12px;
+    margin-top: 10px;
+    
+   
+    
+   }
+
+}
+
+
+
+.status{
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 30px; */
+    /* width: 100px; */
+
+}
+.enrolment-bar p{
+  font-size: 2rem;
+  color: rgb(135, 135, 135);
+  margin-right: -15px;
+ 
+}
+
+
+.status h5{
+  font-size: 10px;
+ 
+ }
+
+
+ /* 
+!!CONTACT DETAILS SECTION
+*/
+
+.contact-details-container{
+  height: 375px;
+  background-color: #27282a;
+  transform: translate(0%, -36%); 
+  z-index: 1;
+  
+}
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
+}
+.contact-container h6{
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height:50%
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: -30px; */
+  transform: translate(0%, -60%); 
+}
+.about-me-container h6 {
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-top: 1px;
+  /* line-height:100%; */
+}
+/* 
+!!
+
+/* !!media */
+@media screen and (min-width: 800px) {
+  .contact-container{
+    /* display: flex;
+    flex-direction: column; */
+    margin-top: 40px;
+  
+  }
+  .contact-container h6{
+    font-size: 11px;
+    /* margin-bottom: 5px; */
+    /* line-height:1% */
+
+  }
+  .about-me-container h6 {
+    font-size: 11px;
+    /* padding-bottom: 20px; */
+   
+  }
+  /* .about-me-container {
+    display: flex;
+    flex-direction: column;
+    
+    transform: translate(0%, -60%); 
+    margin-top: 10px;
+  } */
+  
+} 
+
+
+
+
+/* 
+!!CURRENT COURSE SECTION
+*/
+
+
+.current-course-container{
+  display: flex;
+  align-items:center;
+  align-content: center;
+  justify-content: space-between;
+
+  background-color: #343639;
+  transform: translate(0%, -355%);
+  z-index: 1; 
+  height: 50px;
+  /* margin-top: 60px; */
+}
+/* 
+!!MEDIA
+*/
+@media screen and (min-width: 320px) {
+  .current-course-container{
+   
+    width: 99%;
+    display: flex;
+  flex-direction: row;
+  }
+
+  
+}
+
+
+.coursecontainer{
+  display: block;
+  padding: 2px;
+}
+.coursecontainer h5{
+  margin-top: 0px;
+}
+/* 
+!!hero-icon
+*/
+.hat-container div{
+  width: 30px;
+}
+.neonglow{
+  background: rgb(241, 6, 139);
+	border-radius: 50%;
+  padding: 5px;
+	margin: 10px;
+	height: 15px;
+	width: 15px;
+  color:rgb(255, 255, 255);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(254, 4, 217, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(224, 85, 192, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(220, 152, 210, 0);
+	}
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+  .neonglow{
+    background: rgb(241, 6, 139);
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 5px;
+    height: 25px;
+    width: 25px;
+
+    /* color:rgb(255, 255, 255);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation: pulse 1s infinite; */
+  }
+ 
+  
+
+}
+
+
+.arrow-container div{
+  display: block;
+  /* padding-left: -190px; */
+  width: 90px;
+}
+
+.arrow-currentcourse{
+  margin: 10px;
+	height: 20px;
+	width: 20px;
+  margin-left: 11px;
+  /* position: relative; */
+}
+
+
+
+
+/* 
+!!my-photos section
+*/
+
+/* .photo{
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(243, 46, 79);
+  height: 200px;
+  width: 100%;
+  transform: translate(0%, -119%); 
+  z-index: 1;
+
+} */
+
+.myphotos-container{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  background-color: #343639;
+  height: 100px;
+  width: 100%;
+  transform: translate(0%, -219%); 
+  z-index: 1;
+  
+}
+
+.arrow-myphotos{
+  margin: 10px;
+	height: 20px;
+	width: 20px;
+  margin-left: 101px;
+  /* position: relative; */
+}
+
+.myphotos-container h5{
+  margin-left: 25px;
+}
+
+
+.arrow-myphotos{
+  margin-right:30px;
+}
+
+.myphotos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #343639;
+  height: 100px;
+  width: 99%;
+  transform: translate(-3%, -20%); 
+  z-index: 1;
+ 
+}
+.photoscontainer{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* background-color: */
+  background-color: #343639;
+  height: 199px;
+  width: 100%;
+  /* transform: translate(-103%, 28%);  */
+  z-index: 1;
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 700px)  {
+
+  .myphotos{
+    
+    transform: translate(-3%, -20%); 
+    /* z-index: 1; */
+   
+  }
+  .photoscontainer{
+    
+    transform: translate(-102%, 28%); 
+    /* z-index: 1; */
+  
+  }
+  
+
+}
+@media only screen and (max-width: 1099px) and (min-width: 701px) {
+
+  .myphotos{
+    
+    transform: translate(-2%, -20%); 
+    /* z-index: 1; */
+   
+  }
+  .photoscontainer{
+    
+    transform: translate(-102%, 28%); 
+    /* z-index: 1; */
+  
+  }
+  
+
+}
+
+@media only screen and (min-width: 1100px) and (max-width:1400px) {
+
+  .myphotos{
+    
+    transform: translate(-2%, -20%); 
+    /* z-index: 1; */
+   
+  }
+  .photoscontainer{
+    transform: translate(-102%, 28%); 
+  
+  }
+  
+
+}
+
+
+.photosdiv1{
+  display: flex;
+  flex-direction: row;
+  background-image:url("https://images.westend61.de/0001355145pw/woman-working-outside-using-laptop-MASF17324.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+
+  height: 86%;
+  transform: translate(14%, -2%); 
+  width: 34%;
+  margin: 0 0px;
+  border-radius:5px;
+}
+.photosdiv2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:transparent;
+  height: 100%;
+  
+  width: 50%;
+  padding: 0 28px;
+  border-radius:5px;
+}
+
+.single-photo{
+
+  background-image:url("https://i.ytimg.com/vi/EkpYgepycN4/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+
+  height: 25%;
+  /* width: 60%; */
+  border-radius:5px;
+  /* transform: translate(6%, -4%);  */
+  margin-bottom: 1px;;
+
+}
+/* TODO max-width: 2 == valid till 2 */
+/* TODO min-width: 1 == valid from 1 */
+@media only screen and (max-width: 999px) and (min-width: 320px) {
+  .single-photo{
+    transform: translate(7%, -4%); 
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .single-photo{
+    transform: translate(11%, -4%); 
+    width: 68%;
+  }
+}
+
+@media only screen and (min-width: 1101px) {
+  .single-photo{
+    width: 70%;
+  }
+}
+
+.double-photos{
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  align-content: center;
+  /* justify-content: space-evenly; */
+  justify-content: flex-start;
+  width: 90%;
+  height: 52%;
+  padding: 0px;
+  transform: translate(2%, -4%); 
+
+}
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .double-photos{
+    transform: translate(2%, -4%); 
+    width: 94%;
+  }
+}
+@media only screen and (min-width: 600) and (max-width: 999px) {
+  .double-photos{
+    transform: translate(2%, -4%); 
+    width: 94%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .double-photos{
+    transform: translate(1%, -4%); 
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1101px) and (max-width: 1200px) {
+  .double-photos{
+    transform: translate(5%, -4%); 
+    width: 92%;
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  .double-photos{
+    transform: translate(3%, -4%); 
+    width: 93%;
+  }
+}
+
+.single-img{
+  /* display: flex;
+  flex-direction: row; */
+  background-image:url("https://images.skyscrapercenter.com/building/shangrilahotelandresidences_ext-lookingup_(cc__by-sa)darren__kirby.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+
+  margin: 0 5px;
+  height: 30%;
+  width: 22%;
+  border-radius: 5px;
+
+}
+.single-img-wth-icon{
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2oTMfmtaeh-wa2rUb8Kubq6cpFfsHIrUjWMIitQPFNYZ9EYVDC4JgE6FPd8nfRqe7Y8k&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+  filter: brightness(80%);
+  margin: 0 5px;
+  height: 30%;
+  width: 22%;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 300) and (max-width: 700) {
+  .single-img{
+    /* transform: translate(7%, -4%);  */
+    width: 25%;
+  }
+  .single-img-wth-icon{
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .single-img{
+    /* transform: translate(7%, -4%);  */
+    width: 22%;
+  }
+  .single-img-wth-icon{
+    width: 22%;
+  }
+}
+
+@media only screen and (min-width: 1101px) {
+  .single-img{
+    width: 28%;
+  }
+  .single-img-wth-icon{
+    width: 28%;
+  }
+}
+
+/* @media only screen and (max-width: 1100px) and (min-width: 320px) {
+
+  .single-img{
+    
+    height: 10%;
+    width: 10%;
+    
+  
+  }
+  .single-img-wth-icon{
+    
+    height: 10%;
+    width: 10%;
+  
+  }
+  
+  
+
+} */
+
+
+/* TODO max-width: 2 == valid till 2 */
+/* TODO min-width: 1 == valid from 1 */
+
+
+
+@media only screen and (max-width: 1400px) and (min-width: 320px) {
+
+  
+  .rightarrow-heroicon{
+      /* margin: 20px; */
+      /* position: absolute; */
+      width: 25px;
+    transform: translate(56%, -20%); 
+    z-index: 2;
+    /* transform: translate(-104%, 28%);  */
+    /* z-index: 1; */
+  
+  }
+  
+
+}
+
+
