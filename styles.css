@@ -81,17 +81,71 @@ h1 {
   width: 50px;
   border-radius: 25%;
 } */
+
+
+
+.student-info-background{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 100%;
+  transform: translate(0%, 85%); 
+  /* background-color: aliceblue; */
+  background: transparent;
+  /* z-index: 0; */
+}
+/* .x-heroicon{ */
+  
+  /* width: 50px; */
+  /* transform: translate(611%, 0%);  */
+  /* z-index: 2; */
+  /* position: absolute; */
+  /* position: sticky; */
+/* } */
+
+/* TODO max-width: 2 == valid till 2 */
+/* TODO min-width: 1 == valid from 1 */
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  .x-heroicon{
+    width: 23px;
+    padding: 10px;
+    /* transform: translate(23%, 0%);  */
+    /* z-index: 2; */
+    color: red;
+  }
+} 
+@media screen and (min-width: 900px)  {
+  .x-heroicon{
+    width: 23px;
+    /* transform: translate(23%, 0%);  */
+    z-index: 2;
+    color: yellowgreen;
+  }
+} 
+@media screen and (min-width: 1000px) and (max-width: 1050px) {
+  .x-heroicon{
+    /* width: 23px; */
+    /* transform: translate(23%, 0%);  */
+    position: sticky;
+    color: rgb(0, 170, 255);
+  }
+} 
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  .x-heroicon{
+    width: 23px;
+    /* transform: translate(23%, 0%);  */
+    position: sticky;
+    color: red;
+  }
+} 
+
+
 /* !! profile heroicon */
 .check-circle-heroicon{
   width: 25px;
   transform: translate(222%, 50%); 
   z-index: 2;
-}
-.x{
-  width: 20px;
-  transform: translate(900%, 20%); 
-  z-index: 2;
-  position: relative;
 }
 .student-info {
   background-image: url("./imgs/1.jpeg");
@@ -366,17 +420,23 @@ h1 {
 
 @media only screen and (max-width: 1200px) and (min-width: 700px) {
   .neonglow{
-    background: rgb(241, 6, 139);
-    border-radius: 50%;
     padding: 5px;
     margin: 0 5px;
     height: 25px;
     width: 25px;
+  }
+ 
 
-    /* color:rgb(255, 255, 255);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-    transform: scale(1);
-    animation: pulse 1s infinite; */
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  .neonglow{
+    padding: 5px;
+    margin: 0 5px;
+    height: 30px;
+    width: 30px;
+
+
   }
  
   
@@ -463,7 +523,7 @@ h1 {
   /* justify-content: space-around; */
   /* background-color: */
   background-color: #343639;
-  height: 199px;
+  height: 150%;
   width: 100%;
   /* transform: translate(-103%, 28%);  */
   z-index: 1;
@@ -481,24 +541,24 @@ h1 {
   }
   .photoscontainer{
     
-    transform: translate(-102%, 28%); 
+    transform: translate(-103%, 28%); 
     /* z-index: 1; */
   
   }
   
 
 }
-@media only screen and (max-width: 1099px) and (min-width: 701px) {
+@media only screen and (min-width: 701px) and (max-width: 1099px)  {
 
   .myphotos{
     
-    transform: translate(-2%, -20%); 
+    transform: translate(-3%, -20%); 
     /* z-index: 1; */
    
   }
   .photoscontainer{
     
-    transform: translate(-102%, 28%); 
+    transform: translate(-103%, 28%); 
     /* z-index: 1; */
   
   }
@@ -567,21 +627,37 @@ h1 {
 /* TODO min-width: 1 == valid from 1 */
 @media only screen and (max-width: 999px) and (min-width: 320px) {
   .single-photo{
-    transform: translate(7%, -4%); 
-    width: 65%;
+    transform: translate(4%, -4%); 
+    width: 67%;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px)  {
   .single-photo{
-    transform: translate(11%, -4%); 
-    width: 68%;
+    transform: translate(4%, -4%); 
+    width: 63%;
+  }
+}
+@media only screen and (min-width: 1050px)  {
+  .single-photo{
+    transform: translate(4%, -4%); 
+    width: 67%;
   }
 }
 
 @media only screen and (min-width: 1101px) {
   .single-photo{
-    width: 70%;
+    width: 72%;
+  }
+}
+@media only screen and (min-width: 1151px) {
+  .single-photo{
+    width: 72%;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .single-photo{
+    width: 78%;
   }
 }
 
@@ -592,10 +668,10 @@ h1 {
   align-content: center;
   /* justify-content: space-evenly; */
   justify-content: flex-start;
-  width: 90%;
-  height: 52%;
+  width: 100%;
+  height: 48%;
   padding: 0px;
-  transform: translate(2%, -4%); 
+  /* transform: translate(2%, -4%);  */
 
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
@@ -614,19 +690,25 @@ h1 {
 @media only screen and (min-width: 1000px) {
   .double-photos{
     transform: translate(1%, -4%); 
-    width: 100%;
+    width: 87%;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .double-photos{
+    transform: translate(1%, -4%); 
+    width: 98%;
   }
 }
 @media only screen and (min-width: 1101px) and (max-width: 1200px) {
   .double-photos{
-    transform: translate(5%, -4%); 
-    width: 92%;
+    transform: translate(2%, -4%); 
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .double-photos{
-    transform: translate(3%, -4%); 
-    width: 93%;
+    transform: translate(2%, -4%); 
+    width: 100%;
   }
 }
 
@@ -637,10 +719,10 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
-
-  margin: 0 5px;
+  margin-left: 5px;
+  /* margin: 0 0px; */
   height: 30%;
-  width: 22%;
+  width: 24%;
   border-radius: 5px;
 
 }
@@ -650,38 +732,56 @@ h1 {
   background-size: cover;
   background-position: center 0;
   filter: brightness(80%);
-  margin: 0 5px;
+  /* margin: 0 0px; */
+  margin-left: 5px;
   height: 30%;
-  width: 22%;
+  width: 24%;
   border-radius: 5px;
 }
 
 @media only screen and (min-width: 300) and (max-width: 700) {
   .single-img{
-    /* transform: translate(7%, -4%);  */
-    width: 25%;
+    transform: translate(7%, -4%); 
+    width: 24%;
   }
-  .single-img-wth-icon{
+  /* .single-img-wth-icon{
     width: 25%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1000px) {
   .single-img{
     /* transform: translate(7%, -4%);  */
-    width: 22%;
+    width: 25%;
   }
   .single-img-wth-icon{
-    width: 22%;
+    width: 25%;
   }
 }
 
 @media only screen and (min-width: 1101px) {
   .single-img{
-    width: 28%;
+    width: 38%;
   }
   .single-img-wth-icon{
-    width: 28%;
+    width: 19%;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .single-img{
+    width: 40%;
+  }
+  .single-img-wth-icon{
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 1301px) {
+  .single-img{
+    width: 46%;
+  }
+  .single-img-wth-icon{
+    width: 22%;
   }
 }
 

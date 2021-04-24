@@ -15,7 +15,7 @@ function showPhotos(){
         document.getElementById('photos').style.display="none";
         statusPhotos = 0;
 
-        // document.getElementById("myDIV").style.transform = "rotate(7deg)";
+        // document.getElementById("myDIV").style.transform = "rotategit branch -M main(7deg)";
 
 
         // document.getElementById('showProfile').style.transform =  "rotate(90deg)";
@@ -33,29 +33,27 @@ function showPhotos(){
     }
 }
 
-let statusProfile = 1;
-function showPhotos(){
-    if(statusCode == 1){
-        document.getElementById('photos').style.display="none";
-        statusCode = 0;
-
-        // document.getElementById("myDIV").style.transform = "rotate(7deg)";
+// let statusProfile = 1;
+// function showPhotos(){
+//     if(statusCode == 1){
+//         document.getElementById('photos').style.display="none";
+//         statusCode = 0;
 
 
-        // document.getElementById('showProfile').style.transform =  "rotate(90deg)";
-        document.getElementById('rotate-arrow').style.transform =  "rotate(90deg)";
+
+//         document.getElementById('rotate-arrow').style.transform =  "rotate(90deg)";
         
-    }else if (statusCode == 0) {
-        document.getElementById('photos').style.display="flex";
-        console.log("photos"); 
-        statusCode = 1;
-        document.getElementById('rotate-arrow').style.transform =  "rotate(0deg)";
+//     }else if (statusCode == 0) {
+//         document.getElementById('photos').style.display="flex";
+//         console.log("photos"); 
+//         statusCode = 1;
+//         document.getElementById('rotate-arrow').style.transform =  "rotate(0deg)";
 
 
 
 
-    }
-}
+//     }
+// }
 
 async function getStudents(){
     const fetchingData = await fetch(link);
@@ -71,14 +69,17 @@ async function getStudents(){
 
             
             <div class="main-container"> 
-            <div class="student-info-background"> </div>
+            <div class="student-info-background">
             
-            <div class="x" id="showProfile">
+            <div class="x-heroicon" id="showProfile">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
 </svg>
 
 </div>
+            </div>
+            
+            
             
             <div class="student-info"> 
                        
