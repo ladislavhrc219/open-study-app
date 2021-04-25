@@ -1,3 +1,12 @@
+/* .showThis{
+  display: flex;
+  background-color: rgb(255, 147, 47);
+  z-index: 2;
+} */
+/* .showThat{
+  display: none;
+  
+} */
 
 body {
   background-color:#464444;
@@ -14,32 +23,6 @@ body {
   padding:30px;
   box-sizing: border-box;
 }
-
-
-/* todo THIS
-@media screen and (min-width: 350px) {
-  
-  .card-container {
-    background-color: rgb(7, 145, 237);
-    width: 450px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    
-  }
-} */
-
-/* @media screen and (max-width: 1020px) {
-    .main-container{
-    background-color: green;
-    height: 800px;
-    display: flex;
-
-    
-  }
-}  */
-
 @media screen and (min-width: 320px) {
 
   .main-container{
@@ -49,14 +32,24 @@ body {
   }
 
 } 
+.card-body{
+  padding: 0px;
+  height: 32vh;
+  width: 110%;
+  /* background-color: rgb(180, 133, 15); */
+  background-color:#464444;
+
+  transform: translate(0%, -35%); 
+
+}
+
 body div {
-  /* width: 100px; */
-  background-color: transparent;
+  /* background-color: transparent; */
   color: white;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  width: auto;
+  /* width: 100%; */
 }
 /* !!fontsizes */
 h4 {
@@ -76,69 +69,36 @@ h1 {
 }
 
 /* !! containers */
-/* html tag ===> .img {
-  height: 50px;
-  width: 50px;
-  border-radius: 25%;
-} */
-
-
-
 .student-info-background{
-  display: flex;
+  /* display: flex; */
   justify-content: flex-end;
-  flex-direction: row;
   width: 100%;
-  transform: translate(0%, 85%); 
-  /* background-color: aliceblue; */
+  transform: translate(0%, 66%); 
   background: transparent;
-  /* z-index: 0; */
 }
-/* .x-heroicon{ */
-  
-  /* width: 50px; */
-  /* transform: translate(611%, 0%);  */
-  /* z-index: 2; */
-  /* position: absolute; */
-  /* position: sticky; */
-/* } */
-
-/* TODO max-width: 2 == valid till 2 */
-/* TODO min-width: 1 == valid from 1 */
-@media screen and (min-width: 300px) and (max-width: 900px) {
-  .x-heroicon{
-    width: 23px;
-    padding: 10px;
-    /* transform: translate(23%, 0%);  */
-    /* z-index: 2; */
-    color: red;
+.x-heroicon{
+  margin: 15px;
+  width: 20px; 
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
+}
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    border-radius: 100%;
   }
-} 
-@media screen and (min-width: 900px)  {
-  .x-heroicon{
-    width: 23px;
-    /* transform: translate(23%, 0%);  */
-    z-index: 2;
-    color: yellowgreen;
+  50% {
   }
-} 
-@media screen and (min-width: 1000px) and (max-width: 1050px) {
-  .x-heroicon{
-    /* width: 23px; */
-    /* transform: translate(23%, 0%);  */
-    position: sticky;
-    color: rgb(0, 170, 255);
+  100% {
+    transform: scale(1.5);
   }
-} 
-
-@media screen and (min-width: 1051px) and (max-width: 1100px) {
-  .x-heroicon{
-    width: 23px;
-    /* transform: translate(23%, 0%);  */
-    position: sticky;
-    color: red;
-  }
-} 
+}
 
 
 /* !! profile heroicon */
@@ -154,13 +114,17 @@ h1 {
   background-size: cover;
   background-position: center 0;
   width: auto;
-  height: 240px;
+  height: 25%;
+  /* height: 240px; */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 75%;
   border-radius: 25px 25px 0 0 ;
+
+  /* transform: translate(0%, -1%);  */
+
   
 }
 
@@ -192,12 +156,13 @@ h1 {
   justify-content:space-between;
   text-align:center;
   width: 300px;
-  height: 90px;
+  height: 24%;
   border-radius: 25px;
   background-color: #343639;
-  transform: translate(0%, -61%); 
+  transform: translate(0%, -109%); 
   z-index: 2;
-  margin: 0 10px;
+  margin: -40px 10px;
+  /* margin: 0; */
 }
 /* !!media */
 @media screen and (min-width: 1000px) {
@@ -217,77 +182,60 @@ h1 {
 
 @media only screen and (max-width: 1000px) and (min-width: 320px) {
   .enrolment-bar{
-
-    /* width: 420px; */
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
     width:99%;
-    
+    /* height: 19%; */
+    /* margin-bottom: 12px; */
+    transform: translate(0%, -198%);
+
   }
   .status h6{
     font-size: 12px;
     margin-top: 10px;
-    
-   
-    
    }
-
 }
 
 @media only screen and (max-width: 1401px) and (min-width: 1001px) {
   .enrolment-bar{
-
-    /* width: 420px; */
     width:99%;
-    
+    transform: translate(0%, -77%);
   }
   .status h6{
     font-size: 12px;
     margin-top: 10px;
-    
-   
-    
    }
 
 }
-
-
-
 .status{
   font-size: 19px;
   display: flex;
   flex-direction: column;
-  /* padding-left: 30px; */
-    /* width: 100px; */
-
 }
 .enrolment-bar p{
   font-size: 2rem;
   color: rgb(135, 135, 135);
   margin-right: -15px;
- 
 }
-
-
 .status h5{
   font-size: 10px;
- 
  }
-
-
  /* 
 !!CONTACT DETAILS SECTION
 */
 
 .contact-details-container{
-  height: 375px;
+  height: 355px;
   background-color: #27282a;
-  transform: translate(0%, -36%); 
+  transform: translate(0%, -40%); 
   z-index: 1;
   
 }
 .contact-container{
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 25px;
 
 }
 .contact-container h6{
@@ -330,13 +278,7 @@ h1 {
     /* padding-bottom: 20px; */
    
   }
-  /* .about-me-container {
-    display: flex;
-    flex-direction: column;
-    
-    transform: translate(0%, -60%); 
-    margin-top: 10px;
-  } */
+
   
 } 
 
@@ -464,31 +406,15 @@ h1 {
 /* 
 !!my-photos section
 */
-
-/* .photo{
-  display: flex;
-  flex-direction: column;
-
-  background-color: rgb(243, 46, 79);
-  height: 200px;
-  width: 100%;
-  transform: translate(0%, -119%); 
-  z-index: 1;
-
-} */
-
 .myphotos-container{
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   background-color: #343639;
-  height: 100px;
+  height: 30%;
   width: 100%;
-  transform: translate(0%, -219%); 
+  transform: translate(0%, -340%); 
   z-index: 1;
-  
 }
-
 .arrow-myphotos{
   margin: 10px;
 	height: 20px;
@@ -512,7 +438,7 @@ h1 {
   justify-content: space-between;
   background-color: #343639;
   height: 100px;
-  width: 99%;
+  width: 100%;
   transform: translate(-3%, -20%); 
   z-index: 1;
  
@@ -520,69 +446,39 @@ h1 {
 .photoscontainer{
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
-  /* background-color: */
   background-color: #343639;
-  height: 150%;
+  height: 300%;
   width: 100%;
-  /* transform: translate(-103%, 28%);  */
+  transform: translate(-103%, 28%); 
   z-index: 1;
-
 }
 
-
-@media only screen and (min-width: 320px) and (max-width: 700px)  {
-
+@media only screen and (min-width: 301px) and (max-width: 700px)  {
   .myphotos{
-    
     transform: translate(-3%, -20%); 
-    /* z-index: 1; */
-   
   }
   .photoscontainer{
-    
-    transform: translate(-103%, 28%); 
-    /* z-index: 1; */
-  
+    transform: translate(-103%, 28%);   
+    height: 263%;
   }
-  
-
 }
 @media only screen and (min-width: 701px) and (max-width: 1099px)  {
-
   .myphotos{
-    
     transform: translate(-3%, -20%); 
-    /* z-index: 1; */
-   
   }
   .photoscontainer{
-    
     transform: translate(-103%, 28%); 
-    /* z-index: 1; */
-  
   }
-  
-
 }
 
 @media only screen and (min-width: 1100px) and (max-width:1400px) {
-
   .myphotos{
-    
-    transform: translate(-2%, -20%); 
-    /* z-index: 1; */
-   
+    transform: translate(-3%, -20%); 
   }
   .photoscontainer{
-    transform: translate(-102%, 28%); 
-  
+    transform: translate(-103%, 28%); 
   }
-  
-
 }
-
-
 .photosdiv1{
   display: flex;
   flex-direction: row;
@@ -591,7 +487,7 @@ h1 {
   background-size: cover;
   background-position: center 0;
 
-  height: 86%;
+  height: 69%;
   transform: translate(14%, -2%); 
   width: 34%;
   margin: 0 0px;
@@ -600,13 +496,23 @@ h1 {
 .photosdiv2{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color:transparent;
-  height: 100%;
-  
+  height: 95%;
   width: 50%;
   padding: 0 28px;
   border-radius:5px;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1060px)  {
+  .photosdiv2{
+    width: 55%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 900px)  {
+  .photosdiv2{
+    height: 92%;
+  }
 }
 
 .single-photo{
@@ -623,12 +529,11 @@ h1 {
   margin-bottom: 1px;;
 
 }
-/* TODO max-width: 2 == valid till 2 */
-/* TODO min-width: 1 == valid from 1 */
-@media only screen and (max-width: 999px) and (min-width: 320px) {
+
+@media only screen and (min-width: 320px) and (max-width: 999px)  {
   .single-photo{
     transform: translate(4%, -4%); 
-    width: 67%;
+    width: 72%;
   }
 }
 
@@ -657,57 +562,55 @@ h1 {
 }
 @media only screen and (min-width: 1201px) {
   .single-photo{
-    width: 78%;
+    width: 80%;
   }
 }
 
 .double-photos{
   display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
+  flex-direction:column ;
   align-content: center;
-  /* justify-content: space-evenly; */
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
-  height: 48%;
+  height: 50%;
   padding: 0px;
-  /* transform: translate(2%, -4%);  */
+  transform: translate(-5%, -4%); 
 
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
   .double-photos{
-    transform: translate(2%, -4%); 
-    width: 94%;
+    transform: translate(-5%, -4%); 
+    width: 100%;
   }
 }
 @media only screen and (min-width: 600) and (max-width: 999px) {
   .double-photos{
-    transform: translate(2%, -4%); 
+    transform: translate(-2%, -4%); 
     width: 94%;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .double-photos{
-    transform: translate(1%, -4%); 
-    width: 87%;
+    transform: translate(-8%, -4%); 
+    width: 96%;
   }
 }
 @media only screen and (min-width: 1050px) {
   .double-photos{
-    transform: translate(1%, -4%); 
+    transform: translate(-6%, -4%); 
     width: 98%;
   }
 }
 @media only screen and (min-width: 1101px) and (max-width: 1200px) {
   .double-photos{
-    transform: translate(2%, -4%); 
+    transform: translate(-5%, -4%); 
     width: 100%;
   }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .double-photos{
-    transform: translate(2%, -4%); 
+    transform: translate(-2%, -4%); 
     width: 100%;
   }
 }
@@ -722,7 +625,7 @@ h1 {
   margin-left: 5px;
   /* margin: 0 0px; */
   height: 30%;
-  width: 24%;
+  width: 30%;
   border-radius: 5px;
 
 }
@@ -735,7 +638,7 @@ h1 {
   /* margin: 0 0px; */
   margin-left: 5px;
   height: 30%;
-  width: 24%;
+  width: 26%;
   border-radius: 5px;
 }
 
@@ -827,5 +730,44 @@ h1 {
   
 
 }
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width: 300px) and (max-width: 900px) {
+  .x-heroicon{
+    width: 23px;
+    padding: 10px;
+    
+    color: red;
+  }
+}  */
+/* @media screen and (min-width: 900px)  {
+  .x-heroicon{
+    width: 23px;
+    z-index: 2;
+    color: yellowgreen;
+  }
+}  */
+/* @media screen and (min-width: 1000px) and (max-width: 1050px) {
+  .x-heroicon{
+ 
+    position: sticky;
+    color: rgb(0, 170, 255);
+  }
+}  */
+
+/* @media screen and (min-width: 1051px) and (max-width: 1100px) {
+  .x-heroicon{
+    width: 23px;
+    position: sticky;
+    color: red;
+  }
+}  */
 
 
