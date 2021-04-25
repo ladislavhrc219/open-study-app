@@ -26,7 +26,7 @@ body {
 @media screen and (min-width: 320px) {
 
   .main-container{
-    margin: 0 8rem;
+    margin: -3rem 8rem;
     height: 950px;
     display: flex;
   }
