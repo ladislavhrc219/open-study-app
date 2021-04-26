@@ -1,94 +1,44 @@
+
+
 const link = "http://leads.beta.openstudycollege.info/getTopLeads";
 console.log(link);
-let photoContainer = document.getElementsByClassName('photoscontainer');
 
-for (var i = 0 ; i < photoContainer.length; i++) {
-    photoContainer[i].addEventListener('click', function () {
-        console.log('che che che');
-    });
-}
-let statusPhotos = 1;
+let statusPhotos = true;
 function showPhotos() {
-        if(statusPhotos == 1){
+        if(statusPhotos == true){
             let photos = document.getElementsByClassName('photoscontainer');
-            for(let p =0; p < photos.length; p++){
-                photos[p].style.display="none";
+            for(let photo = 0; photo < photos.length; photo++){
+                photos[photo].style.display="none";
+                statusPhotos = false;
             }
-            statusPhotos = 0;
             document.getElementById('rotate-arrow').style.transform =  "rotate(90deg)";
-        }else if (statusPhotos == 0) {
-            for(let p =0; p < photos.length; p++){
-                photos[p].style.display="flex";
+        }else if (statusPhotos == false) {
+            for(let photo = 0; photo < photos.length; photo++){
+                photos[photo].style.display="flex";
             }
-            statusPhotos = 1;
+            statusPhotos = true;
             document.getElementById('rotate-arrow').style.transform =  "rotate(0deg)";
         }
-    
- console.log(" parade ")
+ console.log(" photoalbum ")
 
 }
 
-// let statusPhotos = 1;
-// function showPhotos(){
-//     if(statusPhotos == 1){
-//         let photos = document.getElementsByClassName('photoscontainer');
-//         for(let p =0; p < photos.length; p++){
-//             photos[p].style.display="none";
-//         }
-//         statusPhotos = 0;
-//         document.getElementById('rotate-arrow').style.transform =  "rotate(90deg)";
-//     }else if (statusPhotos == 0) {
-//         for(let p =0; p < photos.length; p++){
-//             photos[p].style.display="flex";
-//         }
-//         statusPhotos = 1;
-//         document.getElementById('rotate-arrow').style.transform =  "rotate(0deg)";
-//     }
-// }
-
-
 let arrow = document.querySelector('x-button');
-let statusProfile = 1;
+let statusProfile = true;
 function showUserProfile(){
-    if(statusProfile == 1){
-        // let num =document.getElementById('showProfile').style.display="none";
-        // let el;
-        // let num =document.querySelector('#showProfile');
-        // num.style.display="none";
-        // num[i].style.display="none";
-        // num[i].classList.add(showThis);
-        //!! document.getElementById('showProfile').style.display="none";
-        
-        // let num =document.getElementsByClassName('enrolment-bar');
-        let num =document.getElementsByClassName('card-body');
-        // let num =document.getElementById('showProfile');
-        let i;
-        for(i = 0; i < num.length; i++) {
-            // num[i].style.backgroundColor = "red";
-            num[i].style.display="none";
-            // document.getElementById('photos').style.display="none";
-            // num[i].classList.add(showThis);
+    if(statusProfile == true){
+        let cardBody = document.getElementsByClassName('card-body');
+        for(let status = 0; status < cardBody.length; status++) {
+            cardBody[status].style.display="none";
         }
-        statusProfile = 0;   
-        console.log('clicked!!!! ')
-            
-    }else if (statusProfile == 0) {
-
-        // let num =document.getElementsByClassName('enrolment-bar');
-        let num =document.getElementsByClassName('card-body');
-        // let num =document.getElementById('showProfile');
-        let i;
-        for(i = 0; i < num.length; i++) {
-            // num[i].style.backgroundColor = "red";
-            num[i].style.display="flex";
-            // document.getElementById('photos').style.display="none";
-            // num[i].classList.add(showThis);
+        statusProfile = false;   
+        console.log('card-body')
+    }else if (statusProfile == false) {
+        let cardBody =document.getElementsByClassName('card-body');
+        for(let status = 0; status < cardBody.length; status++) {
+            cardBody[status].style.display="flex";   
         }
-        // document.getElementById('showProfile').style.display="flex";
-        // document.getElementById('showProfile').
-        // num[i].style.display="flex";
-        // num[i].classList.remover(showThat);
-        statusProfile = 1;
+        statusProfile = true;
     }
 }
 
@@ -96,16 +46,11 @@ function showUserProfile(){
 async function getStudents(){
     const fetchingData = await fetch(link);
     const studentData = await fetchingData.json();
-    
     let output ="";
-
-    studentData.map(student => 
-        
+    studentData.map(student =>  
         {(
             output +=
             `
-
-            
             <div class="main-container"> 
                 <div class="student-info-background">
                 
@@ -116,15 +61,8 @@ async function getStudents(){
 
                     </div>
                  </div>
-            
-            
-                    
                     <div class="student-info"> 
-                            
-                    
                             <div class="profile-photo" >
-                            
-
                                         <svg class="check-circle-heroicon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                 </svg>
@@ -133,14 +71,8 @@ async function getStudents(){
                 
                     <h4>  ${student.name} </h4> 
                     <h6>  STUDENT </h6>
-                
-
                     <button class="student-id">  ID: ${student.id} </button>
-                    
                     </div> 
-
-            
-            
                 <br>
 
                     <div class="card-body">  
@@ -157,17 +89,11 @@ async function getStudents(){
                                 <p class="pipe"> | </p> 
                                     <div class="status"> 
                                         <h6> 3  </h6> 
-                                        
+            
                                         <h5> COMPLETED COURSES  </h5> 
-
                                     </div>
-
                             </div> 
-
-
                          <div class="contact-details-container" > 
-                        
-
                             <div class="contact-container">
 
                                 <h6> CONTACT DETAILS </h6> 
@@ -183,12 +109,9 @@ async function getStudents(){
                                 raset 
                                 raset raset raset raset
                                 sheets m Ipsum raset sheets m Ipsum raset sheets cont</h6>
-                            
-                            
                             </div>
                         
                          </div>
-
 
                          <div class="current-course-container" > 
                             <div class="hat-container">
@@ -207,12 +130,11 @@ async function getStudents(){
                             </svg>
                             </div>   
                         </div>
-
                 
                       <div  class="myphotos-container">
                             <div class="myphotos"> 
                                         <h5> My Photos </h5>
-                                    <svg id="arrow-button" onclick="showPhotos()" class="arrow-myphotos"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg id="rotate-arrow" onclick="showPhotos()" class="arrow-myphotos"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
                             </div>
@@ -235,19 +157,9 @@ async function getStudents(){
                         </div>
 
                     </div>
-
-               
-           
             </div>
             `
-            
-            
-        
-            
             )})
-
-
-
     document.getElementById('studentCards').innerHTML = output;
 };
 
