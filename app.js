@@ -1,36 +1,50 @@
-console.log("hello")
 const link = "http://leads.beta.openstudycollege.info/getTopLeads";
-console.log(link, '');
-// console.log(fetchUrl);
-// const newElement = document.querySelector(".students");
-// const profilePhoto = document.querySelector(".img");
-// let infoButton = document.querySelector(".infoButton");
+console.log(link);
+let photoContainer = document.getElementsByClassName('photoscontainer');
 
-
-
-let statusPhotos = 1;
-function showPhotos(){
-    if(statusPhotos == 1){
-        // .style.display="none";
-        // let photos = document.getElementById('photos');
-        let photos = document.getElementsByClassName('photoscontainer');
-        for(let p =0; p < photos.length; p++){
-            photos[p].style.display="none";
-        }
-        statusPhotos = 0;
-        document.getElementById('rotate-arrow').style.transform =  "rotate(90deg)";
-        
-    }else if (statusPhotos == 0) {
-        // document.getElementById('photos').style.display="flex";
-        
-        for(let p =0; p < photos.length; p++){
-            photos[p].style.display="flex";
-        }
-
-        statusPhotos = 1;
-        document.getElementById('rotate-arrow').style.transform =  "rotate(0deg)";
-    }
+for (var i = 0 ; i < photoContainer.length; i++) {
+    photoContainer[i].addEventListener('click', function () {
+        console.log('che che che');
+    });
 }
+let statusPhotos = 1;
+function showPhotos() {
+        if(statusPhotos == 1){
+            let photos = document.getElementsByClassName('photoscontainer');
+            for(let p =0; p < photos.length; p++){
+                photos[p].style.display="none";
+            }
+            statusPhotos = 0;
+            document.getElementById('rotate-arrow').style.transform =  "rotate(90deg)";
+        }else if (statusPhotos == 0) {
+            for(let p =0; p < photos.length; p++){
+                photos[p].style.display="flex";
+            }
+            statusPhotos = 1;
+            document.getElementById('rotate-arrow').style.transform =  "rotate(0deg)";
+        }
+    
+ console.log(" parade ")
+
+}
+
+// let statusPhotos = 1;
+// function showPhotos(){
+//     if(statusPhotos == 1){
+//         let photos = document.getElementsByClassName('photoscontainer');
+//         for(let p =0; p < photos.length; p++){
+//             photos[p].style.display="none";
+//         }
+//         statusPhotos = 0;
+//         document.getElementById('rotate-arrow').style.transform =  "rotate(90deg)";
+//     }else if (statusPhotos == 0) {
+//         for(let p =0; p < photos.length; p++){
+//             photos[p].style.display="flex";
+//         }
+//         statusPhotos = 1;
+//         document.getElementById('rotate-arrow').style.transform =  "rotate(0deg)";
+//     }
+// }
 
 
 let arrow = document.querySelector('x-button');
@@ -45,8 +59,8 @@ function showUserProfile(){
         // num[i].classList.add(showThis);
         //!! document.getElementById('showProfile').style.display="none";
         
-        let num =document.getElementsByClassName('enrolment-bar');
-        // let num =document.getElementsByClassName('card-body');
+        // let num =document.getElementsByClassName('enrolment-bar');
+        let num =document.getElementsByClassName('card-body');
         // let num =document.getElementById('showProfile');
         let i;
         for(i = 0; i < num.length; i++) {
@@ -60,8 +74,8 @@ function showUserProfile(){
             
     }else if (statusProfile == 0) {
 
-        let num =document.getElementsByClassName('enrolment-bar');
-        // let num =document.getElementsByClassName('card-body');
+        // let num =document.getElementsByClassName('enrolment-bar');
+        let num =document.getElementsByClassName('card-body');
         // let num =document.getElementById('showProfile');
         let i;
         for(i = 0; i < num.length; i++) {
@@ -198,7 +212,7 @@ async function getStudents(){
                       <div  class="myphotos-container">
                             <div class="myphotos"> 
                                         <h5> My Photos </h5>
-                                    <svg class="arrow-myphotos" id="rotate-arrow" onclick="showPhotos()" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg id="arrow-button" onclick="showPhotos()" class="arrow-myphotos"  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
                             </div>
@@ -238,4 +252,6 @@ async function getStudents(){
 };
 
 getStudents();
+
+
 
